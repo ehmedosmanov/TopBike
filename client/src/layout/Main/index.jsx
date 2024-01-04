@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Header'
 import Footer from '../Footer'
 import { Outlet } from 'react-router-dom'
+import Overlay from '../../components/CommonComponents/Overlay'
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <Header />
       <Outlet />
       <Footer />
+      {/* <Overlay /> */}
     </>
   )
 }

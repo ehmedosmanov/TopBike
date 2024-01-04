@@ -3,26 +3,22 @@ import React from 'react'
 const NavbarActions = () => {
   return (
     <div className='nav-actions col-span-2 flex justify-end gap-4'>
-      <span className='search cursor-pointer'>
+      <span className='search cursor-pointer w-[17px] md:w-[24px]'>
         <svg
           stroke='currentColor'
           fill='currentColor'
           strokeWidth='0'
           viewBox='0 0 512 512'
-          height='2rem'
-          width='2rem'
           xmlns='http://www.w3.org/2000/svg'>
           <path d='M456.69 421.39L362.6 327.3a173.81 173.81 0 0034.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 00327.3 362.6l94.09 94.09a25 25 0 0035.3-35.3zM97.92 222.72a124.8 124.8 0 11124.8 124.8 124.95 124.95 0 01-124.8-124.8z'></path>
         </svg>
       </span>
-      <span className='profile cursor-pointer'>
+      <span className='profile cursor-pointer w-[17px] md:w-[24px]'>
         <svg
           stroke='currentColor'
           fill='currentColor'
           strokeWidth='0'
           viewBox='0 0 512 512'
-          height='2rem'
-          width='2rem'
           xmlns='http://www.w3.org/2000/svg'>
           <path
             fill='none'
@@ -37,14 +33,12 @@ const NavbarActions = () => {
             d='M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z'></path>
         </svg>
       </span>
-      <span className='wishlist cursor-pointer'>
+      <span className='wishlist cursor-pointer w-[17px] md:w-[24px]'>
         <svg
           stroke='currentColor'
           fill='currentColor'
           strokeWidth='0'
           viewBox='0 0 512 512'
-          height='2rem'
-          width='2rem'
           xmlns='http://www.w3.org/2000/svg'>
           <path
             fill='none'
@@ -54,14 +48,12 @@ const NavbarActions = () => {
             d='M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z'></path>
         </svg>
       </span>
-      <span className='basket cursor-pointer'>
+      <span className='basket cursor-pointer w-[17px] md:w-[24px]'>
         <svg
           stroke='currentColor'
           fill='currentColor'
           strokeWidth='0'
           viewBox='0 0 512 512'
-          height='2rem'
-          width='2rem'
           xmlns='http://www.w3.org/2000/svg'>
           <path
             fill='none'

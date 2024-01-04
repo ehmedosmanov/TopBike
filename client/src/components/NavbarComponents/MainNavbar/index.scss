@@ -1,0 +1,48 @@
+.nav-item {
+  margin: 0 0.5rem;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  padding: 0 0.5rem;
+  .nav-link {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 80px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #ffab00;
+      transition: all 0.3s;
+      &::before {
+        width: 100%;
+        transition: all 0.5s;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 0%;
+      background: #ffab00;
+      top: 100%;
+      transition: all 0.5s;
+    }
+  }
+  .dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateY(2px);
+  }
+
+  &:hover {
+    .dropdown {
+      visibility: visible;
+      opacity: 100;
+      transform: translateY(-5px);
+    }
+  }
+}

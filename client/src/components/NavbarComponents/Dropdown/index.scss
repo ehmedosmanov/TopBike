@@ -1,0 +1,23 @@
+.dropdown-link {
+  font-size: 18px;
+  color: #6e6e6e;
+  font-weight: 500;
+  line-height: 28px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #ffab00;
+    transition: all 0.3s;
+  }
+}
+
+.dropdown-heading {
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #ffab00;
+    transition: all 0.3s;
+  }
+}

@@ -5,7 +5,7 @@ import MobileNavbar from '../../components/NavbarComponents/MobileNavbar'
 
 const Header = () => {
   return (
-    <header id='header' className='fixed bg-black top-0 w-full z-[1]'>
+    <header id='header'>
       <MainNavbar />
       <MobileNavbar />
     </header>

@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './index.scss'
+import { GlobalContext } from '../../../context/GlobalContext'
 
-const Overlay = ({ handleOpenClick, open }) => {
+const Overlay = ({ setOpen, open }) => {
+  const { isActive, toggleIsActive, setIsActive, setIsOpen, isOpen } =
+    useContext(GlobalContext)
+
+  const handleOverlayClick = () => {
+    setOpen(false)
+    setIsActive(false)
+    setIsOpen(false)
+  }
+
   return (
     <div
-      onClick={handleOpenClick}
+      onClick={handleOverlayClick}
       className={`overlay fixed w-full h-screen z-20 top-0 bottom-0 left-0 right-0 cursor-pointer ${
-        open ? 'active' : ''
+        open || isActive || isOpen ? 'active' : ''
       }`}></div>
   )
 }

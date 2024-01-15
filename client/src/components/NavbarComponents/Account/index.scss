@@ -1,0 +1,10 @@
+.account-popup {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+  &.active {
+    visibility: visible;
+    opacity: 100;
+    transition: all 0.3s;
+  }
+}

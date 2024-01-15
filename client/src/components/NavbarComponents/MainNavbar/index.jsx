@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import MegaDropdown from '../MegaDropdown'
 import Dropdown from '../Dropdown'
 import NavbarActions from '../NavbarActions'
+import Account from '../Account'
 import './index.scss'
 
+import NavItem from '../NavItems'
+
 const MainNavbar = () => {
+  const [scroll, setScroll] = useState(false)
+
+  useEffect(() => {
+    const handleNavbarScroll = () => {
+      const scrollY = window.scrollY
+      setScroll(scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleNavbarScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleNavbarScroll)
+    }
+  }, [])
+
   return (
     <nav id='nav'>
-      <div className='navbar hidden lg:grid items-center grid-cols-12 px-4 text-white'>
+      <div
+        className={`navbar hidden lg:grid items-center grid-cols-12 px-4 text-white fixed bg-none duration-300  w-full z-[20] ${
+          scroll ? 'bg-black opacity-100 top-0 left-0 right-0' : ''
+        }`}>
         <div className='nav-logo col-span-2'>
           <div className='logo w-3/6'>
             <img
@@ -44,17 +65,18 @@ const MainNavbar = () => {
               <NavLink to={'/'} className={'nav-link'}>
                 Blogs
               </NavLink>
-              <Dropdown
+              {/* <Dropdown
                 grid={'grid-cols-3'}
                 className={
                   'dropdown fixed h-auto bg-white text-black p-8 justify-between gap-10'
                 }
-              />
+              /> */}
             </li>
           </ul>
         </div>
         <NavbarActions />
       </div>
+      <Account />
     </nav>
   )
 }
